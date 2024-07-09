@@ -4,9 +4,15 @@ import { motion } from "framer-motion"; // Importing motion
 import { Sticky } from 'react-sticky'; // Importing Sticky
 import ResponsiveMenu from "./ResponsiveMenu";
 import Logo from "../../assets/website/Vector.svg";
+import Logo2 from "../../assets/website/Vector2.svg";
 import DarkMode from "./DarkMode";
 
 export const MenuLinks = [
+  {
+    id: 0,
+    name: "Home",
+    link: "/",
+  },
   {
     id: 1,
     name: "About",
@@ -22,6 +28,7 @@ export const MenuLinks = [
     name: "Contact",
     link: "/contact",
   },
+  
 ];
 
 const Navbar = () => {
@@ -33,10 +40,10 @@ const Navbar = () => {
 
   return (
     <Sticky topOffset={-50}>
-      {({ style }) => (
+      {({ style, isSticky }) => (
         <motion.div
           style={{ ...style, zIndex: 10 }}
-          className="sticky top-0 w-full dark:bg-black dark:text-white duration-300 shadow-md"
+          className={`sticky top-0 w-full dark:bg-black dark:text-white duration-300 ${isSticky ? 'shadow-md' : ''}`}
           initial={{ y: -100 }}
           animate={{ y: 0 }}
           transition={{ type: "spring", stiffness: 50, damping: 10 }}
@@ -45,13 +52,14 @@ const Navbar = () => {
             <div className="flex justify-between items-center">
               <motion.a
                 href="/"
-                className="flex items-center gap-3"
+                className="flex items-center"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
               >
-                <img src={Logo} alt="" className="w-5" />
-                <span className="text-2xl sm:text-3xl font-semibold">Service Portfolio</span>
+                <img src={Logo} alt="" className="w-16 " />
+                <img src={Logo2} alt="" className="w-24 -ml-3" />
+                {/* <span className="text-2xl sm:text-3xl font-semibold">Tech Bug</span> */}
               </motion.a>
               <nav className="hidden md:block">
                 <ul className="flex items-center gap-8">

@@ -1,7 +1,32 @@
-import React from "react";
-import yellowCar from "../../assets/website/team.png";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
+import team1 from "../../assets/website/team1.png";
+import team2 from "../../assets/website/team2.png";
+import team3 from "../../assets/website/team3.png";
 
 const Hero = () => {
+  const images = [team1, team2, team3];
+  const imageRef = useRef(null);
+  let currentImage = 0;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      gsap.to(imageRef.current, {
+        opacity: 0,
+        duration: 1,
+        onComplete: () => {
+          currentImage = (currentImage + 1) % images.length;
+          imageRef.current.src = images[currentImage];
+          gsap.to(imageRef.current, { opacity: 1, duration: 1 });
+        }
+      });
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [images]);
+
   return (
     <div className="dark:bg-gray-950 dark:text-white duration-300 ">
       <div className="container min-h-[620px] flex mt-10 sm:mt-0">
@@ -9,19 +34,12 @@ const Hero = () => {
           {/* Image section */}
           <div data-aos="zoom-in" className="order-1 sm:order-2 relative">
             <img
-              src={yellowCar}
+              ref={imageRef}
+              src={team1}
               alt=""
-              className="w-full sm:max-w-[280px] md:max-w-[430px]"
+              className="w-full sm:max-w-[300px] md:max-w-[430px]"
+              style={{ transition: "opacity 3s ease-in-out" }}
             />
-            <div
-              data-aos="slide-right"
-              className="absolute -bottom-5 -right-8 px-4 py-2 rounded-xl bg-white dark:bg-gray-900 dark:text-white shadow-md"
-            >
-              <p className="text-gray-500 text-sm ">⭐Projects</p>
-              <h1 className="font-bold">
-                600+ <span className="font-normal">Done</span>
-              </h1>
-            </div>
           </div>
 
           {/* Text section */}
@@ -47,6 +65,15 @@ const Hero = () => {
               className="primary-btn"
             >
               Learn More
+            </button>
+            <button
+              data-aos="fade-up"
+              data-aos-delay="600"
+              data-aos-offset="0"
+              className="watch-video-btn"
+            >
+              <FontAwesomeIcon icon={faPlayCircle} className="play-icon w-auto ml-6" />
+              Watch Video
             </button>
           </div>
         </div>

@@ -14,6 +14,9 @@ import Footer from "./components/Footer/Footer";
 import ContactUs from "./pages/ContactUs";
 import AboutUs from "./pages/AboutUs";
 import WorkCard from "./components/Works/WorkCard";
+import Services2 from "./pages/Services";
+import BlogsComp from "./components/Blogs/BlogsComp";
+// import FeedbackList from "./components/feedback/feedback";
 
 const App = () => {
   useEffect(() => {
@@ -47,7 +50,15 @@ const Home = () => (
       <Work />
     </Fade>
     <Fade direction="down" triggerOnce delay={400}>
+    <Services2/>
+    </Fade>
+    <Fade direction="down" triggerOnce delay={400}>
+    <BlogsComp/>
+    </Fade>
+    <Fade direction="down" triggerOnce delay={400}>
       <WorkCard />
+     {/* < FeedbackList/> */}
+   
     </Fade>
   </>
 );

@@ -18,3 +18,24 @@ html {
     @apply bg-primary text-white hover:bg-primary/80  duration-500 rounded-lg py-2 px-4;
   }
 }
+/* Example CSS: WatchVideoButton.css */
+.watch-video-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #007bff; /* Example background color */
+  color: #fff; /* Example text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.watch-video-button:hover {
+  background-color: #0056b3; /* Example hover background color */
+}
+
+.play-icon {
+  margin-right: 8px; /* Adjust as needed */
+}
