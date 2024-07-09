@@ -2,7 +2,7 @@ import React from "react";
 
 const Service = () => {
   return (
-    <section className="pb-12 pt-20 dark:bg-dark lg:pb-[40px] lg:pt-[50px]">
+    <section className="pb-12 pt-20 bg-black lg:pb-[40px] lg:pt-[50px]"> {/* Changed background to black */}
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
@@ -10,14 +10,6 @@ const Service = () => {
               <span className="mb-2 block text-lg font-semibold text-primary">
                 Our Services
               </span>
-              {/* <h2 className="mb-3 text-3xl font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]">
-                What We Offer
-              </h2> */}
-              {/* <p className="text-base text-body-color dark:text-dark-6">
-                We offer a comprehensive range of services designed to meet your
-                digital needs, our team is dedicated to bringing your ideas to
-                life and enhancing your online presence.
-              </p> */}
             </div>
           </div>
         </div>
@@ -53,8 +45,8 @@ const Service = () => {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M9.89195 14.625C10.9995 10.1252 13.769 7.875 18.1996 7.875C24.8458 7.875 25.6765 12.9375 28.9996 13.7812C31.2151 14.3439 33.1535 13.5002 34.815 11.25C33.7075 15.7498 30.9379 18 26.5073 18C19.8611 18 19.0304 12.9375 15.7073 12.0938C13.4918 11.5311 11.5535 12.3748 9.89195 14.625ZM1.58423 24.75C2.69174 20.2502 5.46132 18 9.89195 18C16.5381 18 17.3689 23.0625 20.692 23.9062C22.9075 24.4689 24.8458 23.6252 26.5073 21.375C25.3998 25.8748 22.6302 28.125 18.1996 28.125C11.5535 28.125 10.7227 23.0625 7.39963 22.2188C5.18405 21.6561 3.24576 22.4998 1.58423 24.75Z"
                   fill="white"
                 />
@@ -95,15 +87,13 @@ const Service = () => {
         
         {/* Learn More Button */}
         <div className="w-full px-4 mt-8 flex justify-center">
-        
-           <button
-              data-aos="fade-up"
-              data-aos-delay="500"
-              data-aos-offset="0"
-              className="primary-btn">
-              Learn More
-            </button>
-        
+          <button
+            data-aos="fade-up"
+            data-aos-delay="500"
+            data-aos-offset="0"
+            className="primary-btn">
+            Learn More
+          </button>
         </div>
       </div>
     </section>
@@ -114,18 +104,16 @@ export default Service;
 
 const ServiceCard = ({ icon, title, details }) => {
   return (
-    <>
-      <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-        <div className="mb-9 rounded-[20px] bg-white p-10 shadow-2 hover:shadow-lg dark:bg-dark-2 md:px-7 xl:px-10">
-          <div className="mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-primary">
-            {icon}
-          </div>
-          <h4 className="mb-[14px] text-2xl font-semibold text-dark dark:text-white">
-            {title}
-          </h4>
-          <p className="text-body-color dark:text-dark-6">{details}</p>
+    <div className="w-full px-4 md:w-1/2 lg:w-1/3">
+      <div className="mb-9 rounded-[20px] bg-white p-10 shadow-2 hover:shadow-lg dark:bg-dark-2 md:px-7 xl:px-10">
+        <div className="mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-primary">
+          {icon}
         </div>
+        <h4 className="mb-[14px] text-2xl font-semibold text-dark dark:text-white">
+          {title}
+        </h4>
+        <p className="text-body-color dark:text-dark-6">{details}</p>
       </div>
-    </>
+    </div>
   );
 };

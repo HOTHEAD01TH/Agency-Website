@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
+import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 import team1 from "../../assets/website/team1.png";
 import team2 from "../../assets/website/team2.png";
 import team3 from "../../assets/website/team3.png";
@@ -28,7 +28,7 @@ const Hero = () => {
   }, [images]);
 
   return (
-    <div className="dark:bg-gray-950 dark:text-white duration-300 ">
+    <div className="dark:bg-gray-950 dark:text-white duration-300">
       <div className="container min-h-[620px] flex mt-10 sm:mt-0">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 place-items-center">
           {/* Image section */}
@@ -37,13 +37,13 @@ const Hero = () => {
               ref={imageRef}
               src={team1}
               alt=""
-              className="w-full sm:max-w-[300px] md:max-w-[430px]"
-              style={{ transition: "opacity 3s ease-in-out" }}
+              className="w-full sm:max-w-[400px] md:max-w-[550px] bg-transparent" // Increased size
+              style={{ transition: "opacity 1s ease-in-out" }} // Match the duration of the GSAP transition
             />
           </div>
 
           {/* Text section */}
-          <div className="space-y-5 order-2 sm:order-1 xl:pr-40 ">
+          <div className="space-y-5 order-2 sm:order-1 xl:pr-40">
             <h1
               data-aos="fade-up"
               className="text-4xl sm:text-5xl font-semibold"
