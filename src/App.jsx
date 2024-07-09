@@ -1,9 +1,9 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Routes, Route, useNavigate } from "react-router-dom"; // Using Routes and useNavigate
 import { Fade } from "react-awesome-reveal"; // Import Fade from react-awesome-reveal
+import { StickyContainer } from 'react-sticky'; // Import StickyContainer
 
 // Component imports
 import Navbar from "./components/Navbar/Navbar";
@@ -27,7 +27,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
+    <StickyContainer className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -36,14 +36,13 @@ const App = () => {
         <Route path="/AboutUs" element={<AboutUs />} />
       </Routes>
       <Footer />
-    </div>
+    </StickyContainer>
   );
 };
 
 const Home = () => (
   <>
     <Hero />
-    {/* Add scroll reveal animations here */}
     <Fade direction="down" triggerOnce>
       <Work />
     </Fade>

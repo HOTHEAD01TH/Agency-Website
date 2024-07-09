@@ -6,7 +6,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 @layer components {
   .link {
     @apply cursor-pointer hover:underline;
@@ -16,6 +15,6 @@ html {
   }
 
   .primary-btn {
-    @apply bg-primary text-white hover:bg-primary/80 duration-500 rounded-lg py-2 px-4;
+    @apply bg-primary text-white hover:bg-primary/80  duration-500 rounded-lg py-2 px-4;
   }
 }
