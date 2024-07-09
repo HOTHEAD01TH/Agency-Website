@@ -2,8 +2,8 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-// eslint-disable-next-line no-unused-vars
 import { Routes, Route, useNavigate } from "react-router-dom"; // Using Routes and useNavigate
+import { Fade } from "react-awesome-reveal"; // Import Fade from react-awesome-reveal
 
 // Component imports
 import Navbar from "./components/Navbar/Navbar";
@@ -43,10 +43,13 @@ const App = () => {
 const Home = () => (
   <>
     <Hero />
-    
-    {/* <Services /> */}
-    <Work />
-    <WorkCard />
+    {/* Add scroll reveal animations here */}
+    <Fade direction="down" triggerOnce>
+      <Work />
+    </Fade>
+    <Fade direction="down" triggerOnce delay={400}>
+      <WorkCard />
+    </Fade>
   </>
 );
 
