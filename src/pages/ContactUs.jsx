@@ -1,6 +1,31 @@
-import React from "react";
+
+import React, { useRef } from 'react';
+import emailjs from 'emailjs-com';
+
+
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      'service', // Replace with your EmailJS service ID
+      'template', // Replace with your EmailJS template ID
+      form.current,
+      'eg' // Replace with your EmailJS user ID (public key)
+    )
+    .then((result) => {
+        console.log(result.text);
+        alert('Message sent successfully!');
+    }, (error) => {
+        console.log(error.text);
+        alert('Failed to send message, please try again.');
+    });
+
+    e.target.reset(); // Reset the form fields after submission
+  };
   return (
     <>
       <section className="relative z-10 overflow-hidden bg-white py-20 dark:bg-dark lg:py-[120px]">
@@ -84,7 +109,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="mb-8 flex w-full max-w-[370px]">
+                <div className="mb-8 flex w-full max-w-[370px] ">
                   <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary/5 text-primary sm:h-[70px] sm:max-w-[70px]">
                     <svg
                       width="32"
@@ -135,12 +160,16 @@ const Contact = () => {
                     defaultValue=""
                   />
                   <div>
-                    <button
-                      type="submit"
-                      className="w-full rounded border border-primary bg-primary p-3 text-white transition hover:bg-opacity-90"
-                    >
-                      Send Message
-                    </button>
+                  <button
+  type="submit"
+  className="w-full rounded border border-primary p-3 text-white transition hover:bg-opacity-90"
+  style={{
+    backgroundImage: "linear-gradient(45deg, #6b0fbb, #aa4fff 50%, #ff66c4)",
+    color: "#ffffff"
+  }}
+>
+  Send Message
+</button>
                   </div>
                 </form>
                 <div>

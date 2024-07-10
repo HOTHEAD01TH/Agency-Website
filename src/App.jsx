@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Routes, Route, useNavigate } from "react-router-dom"; // Using Routes and useNavigate
-import { Fade } from "react-awesome-reveal"; // Import Fade from react-awesome-reveal
-import { StickyContainer } from 'react-sticky'; // Import StickyContainer
+import { Routes, Route } from "react-router-dom";
+import { Fade } from "react-awesome-reveal";
+import { StickyContainer } from 'react-sticky';
 
 // Component imports
 import Navbar from "./components/Navbar/Navbar";
@@ -16,7 +16,7 @@ import AboutUs from "./pages/AboutUs";
 import WorkCard from "./components/Works/WorkCard";
 import Services2 from "./pages/Services";
 import BlogsComp from "./components/Blogs/BlogsComp";
-// import FeedbackList from "./components/feedback/feedback";
+import FabButton from "./components/fab"; // Adjust the import path if needed
 
 const App = () => {
   useEffect(() => {
@@ -38,6 +38,7 @@ const App = () => {
         <Route path="/service" element={<Services />} />
         <Route path="/AboutUs" element={<AboutUs />} />
       </Routes>
+      <FabButton /> {/* Render the FabButton component here */}
       <Footer />
     </StickyContainer>
   );
@@ -50,15 +51,13 @@ const Home = () => (
       <Work />
     </Fade>
     <Fade direction="down" triggerOnce delay={400}>
-    <Services2/>
+      <Services2 />
     </Fade>
     <Fade direction="down" triggerOnce delay={400}>
-    <BlogsComp/>
+      <BlogsComp />
     </Fade>
     <Fade direction="down" triggerOnce delay={400}>
       <WorkCard />
-     {/* < FeedbackList/> */}
-   
     </Fade>
   </>
 );

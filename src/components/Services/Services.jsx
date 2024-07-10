@@ -2,7 +2,7 @@ import React from "react";
 
 const Service = () => {
   return (
-    <section className="pb-12 pt-20 dark:bg-dark lg:pb-[40px] lg:pt-[50px]">
+    <section className="pb-12 pt-20 bg-black lg:pb-[10px] lg:pt-[10px]">
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
@@ -22,8 +22,8 @@ const Service = () => {
 
         <div className="-mx-4 flex flex-wrap">
           <ServiceCard
-            title="Web Development"
-            details="From static websites to complex web applications, we bring your ideas to life."
+            title="App Development and Designing"
+            details="Mobile Apps and Web Apps From static websites to complex web applications, we bring your ideas to life.We dejoy working with discerning clients, people for whom qualuty, service, integrity & aesthetics."
             icon={
               <svg
                 width="36"
@@ -40,8 +40,8 @@ const Service = () => {
             }
           />
           <ServiceCard
-            title="UI/UX Design"
-            details="Intuitive and beautiful user interfaces designed to enhance user experience."
+            title="Web Development and Designing"
+            details="1. Standalone/Landing Page 3. Professional Portfolio 4. 5. Corporate Website 6. Advanced E-commerce Website 7. Membership/Subscription Website 8. Custom Business Application."
             icon={
               <svg
                 width="36"
@@ -60,8 +60,8 @@ const Service = () => {
             }
           />
           <ServiceCard
-            title="Marketing"
-            details="Comprehensive digital marketing strategies tailored to your business goals."
+            title="Digital Marketing"
+            details=" 1. SEO Services 2. Social Media Management 3. Content Marketing 4. Pay-Per-Click (PPC) Advertising .We dejoy working with discerning clients, people for whom qualuty, service, integrity & aesthetics."
             icon={
               <svg
                 width="36"
@@ -90,7 +90,7 @@ const Service = () => {
             }
           />
           <ServiceCard
-            title="Speed Optimized"
+            title="Business Automations"
             details="We dejoy working with discerning clients, people for whom qualuty, service, integrity & aesthetics."
             icon={
               <svg
@@ -112,7 +112,7 @@ const Service = () => {
             }
           />
           <ServiceCard
-            title="Fully Customizable"
+            title=" Smart and Digital Business Cards"
             details="We dejoy working with discerning clients, people for whom qualuty, service, integrity & aesthetics."
             icon={
               <svg
@@ -130,7 +130,7 @@ const Service = () => {
             }
           />
           <ServiceCard
-            title="Regular Updates"
+            title="Deployments and Updates"
             details="We dejoy working with discerning clients, people for whom qualuty, service, integrity & aesthetics."
             icon={
               <svg
@@ -161,18 +161,20 @@ export default Service;
 
 const ServiceCard = ({ icon, title, details }) => {
   return (
-    <>
-      <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-        <div className="mb-9 rounded-[20px] bg-white p-10 shadow-2 hover:shadow-lg dark:bg-dark-2 md:px-7 xl:px-10">
-          <div className="mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-primary">
-            {icon}
-          </div>
-          <h4 className="mb-[14px] text-2xl font-semibold text-dark dark:text-white">
-            {title}
-          </h4>
-          <p className="text-body-color dark:text-dark-6">{details}</p>
+    <div className="w-full px-4 md:w-1/2 lg:w-1/3">
+      <div className="mb-9 block-[20px] p-10 shadow-2 hover:shadow-lg  bg-white md:px-7 xl:px-10">
+        {/* Apply gradient background to the entire ServiceCard */}
+        <div
+          className="mb-8 flex h-[70px] w-[70px] items-center justify-center block-[50%] bg-gradient-to-br from-purple-600 via-pink-500 to-pink-500"
+          style={{ backgroundImage: "linear-gradient(to bottom right, #6b0fbb, #aa4fff, #ff66c4)" }}
+        >
+          {icon}
         </div>
+        <h4 className="mb-[14px] text-2xl font-semibold text-dark dark:text-white">
+          {title}
+        </h4>
+        <p className="text-body-color dark:text-dark-6">{details}</p>
       </div>
-    </>
+    </div>
   );
 };

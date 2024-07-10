@@ -2,9 +2,13 @@ import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 
 const BlogCard = ({ image, title, description }) => {
+  const cardStyle = {
+    backgroundImage: "linear-gradient(to bottom right, #6b0fbb, #aa4fff, #ff66c4)",
+  };
+
   return (
     <>
-      <div className=" dark:text-white group">
+      <div className="dark:text-white group">
         <div className="overflow-hidden">
           <img
             src={image}
@@ -12,7 +16,10 @@ const BlogCard = ({ image, title, description }) => {
             className="mx-auto h-[420px] w-full object-cover group-hover:scale-105 duration-300"
           />
         </div>
-        <div className="space-y-2 p-4 ml-6 bg-white dark:bg-slate-950 -translate-y-16">
+        <div
+          className="space-y-2 p-4 ml-6 -translate-y-16 rounded-lg shadow-lg"
+          style={{ ...cardStyle, background: "linear-gradient(to bottom right, #6b0fbb, #aa4fff, #ff66c4)" }}
+        >
           <h1 className="line-clamp-1 text-2xl font-semibold">{title}</h1>
           <p className="line-clamp-4 text-gray-500 text-sm">{description}</p>
           <div className="flex justify-end pr-4 text-gray-500">

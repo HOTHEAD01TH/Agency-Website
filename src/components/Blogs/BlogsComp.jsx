@@ -1,9 +1,8 @@
-// eslint-disable-next-line no-unused-vars
 import React from "react";
 import BlogCard from "./BlogCard";
-import Img1 from "../../assets/blog/blog1.png";
-import Img2 from "../../assets/blog/blog2.png";
-import Img3 from "../../assets/blog/blog3.png";
+import Img1 from "../../assets/blog/blog1.jpg";
+import Img2 from "../../assets/blog/blog2.jpg";
+import Img3 from "../../assets/blog/blog3.jpg";
 
 const BlogsData = [
   {
@@ -38,8 +37,8 @@ const BlogsData = [
 const BlogsComp = () => {
   return (
     <>
-      <div className="bg-black dark:bg-black dark:text-white py-10 pb-14">
-        <section data-aos="fade-up" className="container ">
+      <div className="bg-black dark:bg-black dark:text-white py-1 pb-14">
+        <section data-aos="fade-up" className="container">
           <h1 className="my-8 border-l-8 border-primary/50 py-2 pl-2 text-3xl font-semibold">
             Our Projects
           </h1>
@@ -48,9 +47,9 @@ const BlogsComp = () => {
               <BlogCard key={item.id} {...item} />
             ))}
           </div>
-          <div className="text-center">
+          {/* <div className="text-center">
             <button className="primary-btn">View All Projects</button>
-          </div>
+          </div> */}
         </section>
       </div>
     </>

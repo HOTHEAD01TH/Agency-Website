@@ -38,7 +38,7 @@ const Hero = () => {
               src={team1}
               alt=""
               className="w-full sm:max-w-[400px] md:max-w-[550px] bg-transparent" // Increased size
-              style={{ transition: "opacity 1s ease-in-out" }} // Match the duration of the GSAP transition
+              style={{ transition: "opacity 1000s ease-in-out" }} // Match the duration of the GSAP transition
             />
           </div>
 
@@ -50,7 +50,14 @@ const Hero = () => {
               style={{ lineHeight: 1.2 }}
             >
               Building Brands in the{" "}
-              <span className="text-primary">Digital Agency</span>
+              <span style={{
+                backgroundImage: "linear-gradient(45deg, #6b0fbb, #aa4fff 50%, #ff66c4)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                textShadow: "0px 2px 4px rgba(0, 0, 0, 0.3)", // Optional: Add text shadow for better contrast
+              }}>
+                Digital Agency
+              </span>
             </h1>
             <p data-aos="fade-up" data-aos-delay="300">
               Your partner in navigating the ever-evolving landscape of digital
@@ -63,6 +70,15 @@ const Hero = () => {
               data-aos-delay="500"
               data-aos-offset="0"
               className="primary-btn"
+              style={{
+                backgroundImage: "linear-gradient(45deg, #6b0fbb, #aa4fff 50%, #ff66c4)",
+                color: "#ffffff", // Ensure text color is contrasted against the gradient background
+                padding: "9px 15px", // Adjust padding as needed
+                borderRadius: "8px", // Adjust border radius as needed
+                border: "none", // Remove border if not needed
+                cursor: "pointer", // Ensure cursor changes on hover
+                boxShadow: "0px 4px 14px rgba(0, 0, 0, 0.15)", // Optional: Add box shadow for depth
+              }}
             >
               Learn More
             </button>

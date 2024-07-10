@@ -87,14 +87,21 @@ const Service = () => {
         
         {/* Learn More Button */}
         <div className="w-full px-4 mt-8 flex justify-center">
-          <button
-            data-aos="fade-up"
-            data-aos-delay="500"
-            data-aos-offset="0"
-            className="primary-btn">
-            Learn More
-          </button>
-        </div>
+  <button
+    data-aos="fade-up"
+    data-aos-delay="500"
+    data-aos-offset="0"
+    className="primary-btn"
+    style={{
+      backgroundImage: "linear-gradient(to bottom right, #4b0a82, #8a3caa, #cc55a3)",
+      padding: "12px 24px",
+      borderRadius: "8px",
+    }}
+  >
+    Learn More
+  </button>
+</div>
+
       </div>
     </section>
   );
@@ -102,11 +109,19 @@ const Service = () => {
 
 export default Service;
 
+// Inside ServiceCard component
+
+// Inside ServiceCard component
+
 const ServiceCard = ({ icon, title, details }) => {
   return (
     <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-      <div className="mb-9 rounded-[20px] bg-white p-10 shadow-2 hover:shadow-lg dark:bg-dark-2 md:px-7 xl:px-10">
-        <div className="mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-primary">
+      <div className="mb-9 block-[20px] p-10 shadow-2 hover:shadow-lg  bg-white md:px-7 xl:px-10">
+        {/* Apply gradient background to the entire ServiceCard */}
+        <div
+          className="mb-8 flex h-[70px] w-[70px] items-center justify-center block-[50%] bg-gradient-to-br from-purple-600 via-pink-500 to-pink-500"
+          style={{ backgroundImage: "linear-gradient(to bottom right, #6b0fbb, #aa4fff, #ff66c4)" }}
+        >
           {icon}
         </div>
         <h4 className="mb-[14px] text-2xl font-semibold text-dark dark:text-white">

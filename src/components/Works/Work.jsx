@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React from 'react';
 
 const statsData = [
@@ -15,8 +14,15 @@ const Stats = () => {
         <h2 className="text-3xl font-extrabold text-white text-center mb-8">Our Achievements</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {statsData.map((stat, index) => (
-            <div key={index} className="bg-black p-6 rounded-lg shadow-md text-center">
-              <div className="text-4xl font-bold text-[#483285]">{stat.value}</div>
+            <div
+              key={index}
+              className="p-6 rounded-lg shadow-md text-center"
+              style={{
+                backgroundImage: "linear-gradient(45deg, #6b0fbb, #aa4fff 50%, #ff66c4)",
+                color: "white",
+              }}
+            >
+              <div className="text-4xl font-bold">{stat.value}</div>
               <div className="mt-2 text-lg text-gray-300">{stat.label}</div>
             </div>
           ))}
