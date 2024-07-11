@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from 'react-router-dom';
+
 
 const Service = () => {
   return (
@@ -23,7 +25,7 @@ const Service = () => {
         <div className="-mx-4 flex flex-wrap">
           <ServiceCard
             title="App Development and Designing"
-            details="Mobile Apps and Web Apps From static websites to complex web applications, we bring your ideas to life.We dejoy working with discerning clients, people for whom qualuty, service, integrity & aesthetics."
+            details="Mobile Apps and Web Apps From static websites to complex web applications, we bring your ideas to life.We dejoy working with discerning clients, people for whom qualuty, service, integrity."
             icon={
               <svg
                 width="36"
@@ -112,7 +114,7 @@ const Service = () => {
             }
           />
           <ServiceCard
-            title=" Smart and Digital Business Cards"
+            title=" Digital Business Cards"
             details="We dejoy working with discerning clients, people for whom qualuty, service, integrity & aesthetics."
             icon={
               <svg
@@ -159,14 +161,17 @@ const Service = () => {
 
 export default Service;
 
+
 const ServiceCard = ({ icon, title, details }) => {
   return (
     <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-      <div className="mb-9 block-[20px] p-10 shadow-2 hover:shadow-lg  bg-white md:px-7 xl:px-10">
+      <div className="mb-9 block-[20px] p-10 shadow-2 hover:shadow-lg bg-white md:px-7 xl:px-10" style={{ height: '400px' }}>
         {/* Apply gradient background to the entire ServiceCard */}
         <div
           className="mb-8 flex h-[70px] w-[70px] items-center justify-center block-[50%] bg-gradient-to-br from-purple-600 via-pink-500 to-pink-500"
-          style={{ backgroundImage: "linear-gradient(to bottom right, #6b0fbb, #aa4fff, #ff66c4)" }}
+          style={{
+            backgroundImage: "linear-gradient(to bottom right, #6b0fbb, #aa4fff, #ff66c4)",
+          }}
         >
           {icon}
         </div>
@@ -174,7 +179,25 @@ const ServiceCard = ({ icon, title, details }) => {
           {title}
         </h4>
         <p className="text-body-color dark:text-dark-6">{details}</p>
+        
+        <Link
+          to="/StoryZoom"
+          className="inline-block mt-3 bg-gradient-to-br from-purple-600 via-pink-500 to-pink-500 text-white font-bold py-2 px-4 rounded-full transition duration-300 hover:bg-purple-700"
+          style={{
+            backgroundImage: "linear-gradient(to bottom right, #6b0fbb, #aa4fff, #ff66c4)",
+            borderRadius: "8px",
+            border: "none",
+            cursor: "pointer",
+            textDecoration: "none", // Ensure link doesn't have default underline
+          }}
+        >
+          Learn More
+        </Link>
       </div>
     </div>
   );
 };
+
+
+
+

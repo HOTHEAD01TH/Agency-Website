@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 import { StickyContainer } from 'react-sticky';
 
+
 // Component imports
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
@@ -18,6 +19,8 @@ import Services2 from "./pages/Services";
 import BlogsComp from "./components/Blogs/BlogsComp";
 import FabButton from "./components/fab"; // Adjust the import path if needed
 
+// import StoryZoom from "./components/servicesinfo/StoryZoom";
+
 const App = () => {
   useEffect(() => {
     AOS.init({
@@ -30,13 +33,16 @@ const App = () => {
   }, []);
 
   return (
+    
     <StickyContainer className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
       <Navbar />
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/service" element={<Services />} />
         <Route path="/AboutUs" element={<AboutUs />} />
+        {/* <Route path="/StoryZoom" element={<StoryZoom />}/> */}
       </Routes>
       <FabButton /> {/* Render the FabButton component here */}
       <Footer />
