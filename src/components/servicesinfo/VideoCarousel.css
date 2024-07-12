@@ -1,0 +1,75 @@
+.video-carousel-container {
+     position: relative;
+     width: 100vw;
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     overflow: hidden;
+   }
+   
+   .video-carousel-video {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+   }
+   
+   .video-carousel-controls {
+     position: absolute;
+     bottom: 20px;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     padding: 0 20px;
+   }
+   
+   .carousel-button {
+     background-color: rgba(0, 0, 0, 0.5);
+     color: white;
+     border: none;
+     padding: 10px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+   }
+   
+   .carousel-button:hover {
+     background-color: rgba(0, 0, 0, 0.8);
+   }
+   
+   .left-button {
+     position: relative;
+     left: 20px;
+     bottom: 340px;
+     
+   }
+   
+  
+   
+   .right-button {
+     position: relative;
+     right: 20px;
+     bottom: 340px;
+   }
+   .video-carousel-text {
+     position: absolute;
+     inset-x: 15%;
+     bottom: 5%;
+     padding: 10px;
+     text-align: center;
+     color: white;
+     background: rgba(0, 0, 0, 0.5); /* Add background for readability */
+   }
+   
+   @media (min-width: 768px) {
+     .video-carousel-text {
+       display: block;
+     }
+   }
+   
+   @media (max-width: 767px) {
+     .video-carousel-text {
+       display: block; /* Ensure text is visible on mobile */
+       padding: 5px; /* Adjust padding for smaller screens */
+       font-size: 0.8rem; /* Adjust font size for smaller screens */
+     }
+   }

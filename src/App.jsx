@@ -6,6 +6,7 @@ import { Fade } from "react-awesome-reveal";
 import { StickyContainer } from 'react-sticky';
 
 
+
 // Component imports
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
@@ -19,7 +20,7 @@ import Services2 from "./pages/Services";
 import BlogsComp from "./components/Blogs/BlogsComp";
 import FabButton from "./components/fab"; // Adjust the import path if needed
 
-// import StoryZoom from "./components/servicesinfo/StoryZoom";
+import StoryZoom from "./components/servicesinfo/StoryZoom";
 
 const App = () => {
   useEffect(() => {
@@ -42,9 +43,9 @@ const App = () => {
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/service" element={<Services />} />
         <Route path="/AboutUs" element={<AboutUs />} />
-        {/* <Route path="/StoryZoom" element={<StoryZoom />}/> */}
+        <Route path="/StoryZoom" element={<StoryZoom />}/> 
       </Routes>
-      <FabButton /> {/* Render the FabButton component here */}
+      <FabButton /> 
       <Footer />
     </StickyContainer>
   );
@@ -67,5 +68,6 @@ const Home = () => (
     </Fade>
   </>
 );
+
 
 export default App;
