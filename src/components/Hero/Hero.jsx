@@ -37,7 +37,7 @@ const Hero = () => {
               ref={imageRef}
               src={team1}
               alt=""
-              className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[550px] bg-transparent" // Adjusted size for mobile view
+              className="w-full max-w-[400px] sm:max-w-[550px] md:max-w-[550px] bg-transparent" // Adjusted size for mobile view
               style={{ transition: "opacity 1000s ease-in-out" }} // Match the duration of the GSAP transition
             />
           </div>

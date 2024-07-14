@@ -43,7 +43,7 @@ const Navbar = () => {
       {({ style, isSticky }) => (
         <motion.div
           style={{ ...style, zIndex: 10 }}
-          className={`sticky top-0 w-full dark:bg-black dark:text-white duration-300 ${isSticky ? 'shadow-md' : ''}`}
+          className={`sticky top-0 w-full bg-white dark:bg-black dark:text-white duration-300 ${isSticky ? 'shadow-md' : ''}`}
           initial={{ y: -100 }}
           animate={{ y: 0 }}
           transition={{ type: "spring", stiffness: 50, damping: 10 }}
@@ -79,25 +79,23 @@ const Navbar = () => {
                       </a>
                     </motion.li>
                   ))}
-                 <motion.button
-  className="primary-btn"
-  initial={{ scale: 0.8 }}
-  animate={{ scale: 1 }}
-  transition={{ duration: 0.6 }}
-  // Apply gradient background using inline style
-  style={{
-    backgroundImage: "linear-gradient(45deg, #6b0fbb, #aa4fff 50%, #ff66c4)",
-    color: "#ffffff", // Ensure text color is contrasted against the gradient background
-    padding: "9px 15px", // Adjust padding as needed
-    borderRadius: "8px", // Adjust border radius as needed
-    border: "none", // Remove border if not needed
-    cursor: "pointer", // Ensure cursor changes on hover
-    boxShadow: "0px 4px 14px rgba(0, 0, 0, 0.15)", // Optional: Add box shadow for depth
-  }}
->
-  Get Started
-</motion.button>
-
+                  <motion.button
+                    className="primary-btn"
+                    initial={{ scale: 0.8 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 0.6 }}
+                    style={{
+                      backgroundImage: "linear-gradient(45deg, #6b0fbb, #aa4fff 50%, #ff66c4)",
+                      color: "#ffffff", // Ensure text color is contrasted against the gradient background
+                      padding: "9px 15px", // Adjust padding as needed
+                      borderRadius: "8px", // Adjust border radius as needed
+                      border: "none", // Remove border if not needed
+                      cursor: "pointer", // Ensure cursor changes on hover
+                      boxShadow: "0px 4px 14px rgba(0, 0, 0, 0.15)", // Optional: Add box shadow for depth
+                    }}
+                  >
+                    Get Started
+                  </motion.button>
                   {/* <DarkMode /> */}
                 </ul>
               </nav>
