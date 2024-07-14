@@ -5,7 +5,7 @@ import { Sticky } from 'react-sticky'; // Importing Sticky
 import ResponsiveMenu from "./ResponsiveMenu";
 import Logo from "../../assets/website/Vector.svg";
 import Logo2 from "../../assets/website/Vector2.svg";
-import DarkMode from "./DarkMode";
+// import DarkMode from "./DarkMode";
 
 export const MenuLinks = [
   {
@@ -98,11 +98,11 @@ const Navbar = () => {
   Get Started
 </motion.button>
 
-                  <DarkMode />
+                  {/* <DarkMode /> */}
                 </ul>
               </nav>
               <div className="flex items-center gap-4 md:hidden">
-                <DarkMode />
+                {/* <DarkMode /> */}
                 {showMenu ? (
                   <HiMenuAlt1 onClick={toggleMenu} className="cursor-pointer transition-all" size={30} />
                 ) : (

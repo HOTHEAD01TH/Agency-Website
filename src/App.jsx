@@ -54,16 +54,16 @@ const App = () => {
 const Home = () => (
   <>
     <Hero />
-    <Fade direction="down" triggerOnce>
+    <Fade direction="up" triggerOnce>
       <Work />
     </Fade>
-    <Fade direction="down" triggerOnce delay={400}>
+    <Fade direction="up" triggerOnce delay={400}>
       <Services2 />
     </Fade>
-    <Fade direction="down" triggerOnce delay={400}>
+    <Fade direction="up" triggerOnce delay={400}>
       <BlogsComp />
     </Fade>
-    <Fade direction="down" triggerOnce delay={400}>
+    <Fade direction="up" triggerOnce delay={400}>
       <WorkCard />
     </Fade>
   </>

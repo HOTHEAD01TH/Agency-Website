@@ -29,7 +29,7 @@ const Hero = () => {
 
   return (
     <div className="dark:bg-gray-950 dark:text-white duration-300">
-      <div className="container min-h-[620px] flex mt-10 sm:mt-0">
+      <div className="container min-h-[620px] flex mt-0 sm:mt-0"> {/* Removed top margin for mobile view */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 place-items-center">
           {/* Image section */}
           <div data-aos="zoom-in" className="order-1 sm:order-2 relative">
@@ -37,7 +37,7 @@ const Hero = () => {
               ref={imageRef}
               src={team1}
               alt=""
-              className="w-full sm:max-w-[400px] md:max-w-[550px] bg-transparent" // Increased size
+              className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[550px] bg-transparent" // Adjusted size for mobile view
               style={{ transition: "opacity 1000s ease-in-out" }} // Match the duration of the GSAP transition
             />
           </div>
