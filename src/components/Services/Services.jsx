@@ -161,25 +161,28 @@ const Service = () => {
 
 export default Service;
 
-
 const ServiceCard = ({ icon, title, details }) => {
   return (
     <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-      <div className="mb-9 block-[20px] p-10 shadow-2 hover:shadow-lg bg-white md:px-7 xl:px-10" style={{ height: '400px' }}>
-        {/* Apply gradient background to the entire ServiceCard */}
+      <div
+        className="flex flex-col justify-between h-full mb-9 p-10 shadow-2 hover:shadow-lg bg-white md:px-7 xl:px-10"
+        style={{ height: '400px' }}
+      >
+        {/* Apply gradient background to the icon container */}
         <div
-          className="mb-8 flex h-[70px] w-[70px] items-center justify-center block-[50%] bg-gradient-to-br from-purple-600 via-pink-500 to-pink-500"
+          className="mb-8 flex h-[70px] w-[70px] items-center justify-center bg-gradient-to-br from-purple-600 via-pink-500 to-pink-500"
           style={{
             backgroundImage: "linear-gradient(to bottom right, #6b0fbb, #aa4fff, #ff66c4)",
           }}
         >
           {icon}
         </div>
-        <h4 className="mb-[14px] text-2xl font-semibold text-dark dark:text-white">
-          {title}
-        </h4>
-        <p className="text-body-color dark:text-dark-6">{details}</p>
-        
+        <div>
+          <h4 className="mb-[14px] text-2xl font-semibold text-dark dark:text-white">
+            {title}
+          </h4>
+          <p className="text-body-color dark:text-dark-6">{details}</p>
+        </div>
         <Link
           to="/StoryZoom"
           className="inline-block mt-3 bg-gradient-to-br from-purple-600 via-pink-500 to-pink-500 text-white font-bold py-2 px-4 rounded-full transition duration-300 hover:bg-purple-700"
@@ -197,7 +200,3 @@ const ServiceCard = ({ icon, title, details }) => {
     </div>
   );
 };
-
-
-
-
