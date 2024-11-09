@@ -1,13 +1,13 @@
-# Services Portfolio
+# Agency Website
 
-This is a Services Portfolio web application built using React and a CSS framework (replace with the actual framework if specific). It showcases a company's core services with a modern, user-friendly, and responsive interface.
+This is a Agency Website web application built using React and a CSS framework (replace with the actual framework if specific). It showcases a company's core Agency with a modern, user-friendly, and responsive interface.
 
 
 
 ## Features
 
-- **Home Page:** Introduces the company and its services.
-- **Services Page:** Details of various services offered.
+- **Home Page:** Introduces the company and its Agency.
+- **Agency Page:** Details of various Agency offered.
 - **About Us Page:** Information about the company and its mission.
 - **Contact Page:** Contact form for inquiries.
 
@@ -23,8 +23,8 @@ This is a Services Portfolio web application built using React and a CSS framewo
 To get a local copy of the code, clone it using git:
 
 ```
-git clone https://github.com/HOTHEAD01TH/services-portfolio.git
-cd services-portfolio
+git clone https://github.com/HOTHEAD01TH/Agency-Website.git
+cd Agency-Website
 ```
 
 Make it your own:
